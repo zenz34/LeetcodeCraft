@@ -8,7 +8,7 @@ public class Solution {
             return s;
         }
         
-        len = s.length;
+        len = s.length();
         
         for (i = 0; i < len; i++) {
             tmp = s[i];
