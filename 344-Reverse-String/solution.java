@@ -2,7 +2,7 @@ public class Solution {
     public String reverseString(String s) {
         int i = 0;
         int len = 0;
-        char tmp = "";
+        char tmp = '';
         
         if (null == s) {
             return s;
