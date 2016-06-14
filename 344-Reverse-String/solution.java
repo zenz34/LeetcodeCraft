@@ -10,7 +10,7 @@ public class Solution {
         
         len = s.length;
         
-        for (i = 0; i < len; i) {
+        for (i = 0; i < len; i++) {
             tmp = s[i];
             s[len - 1 - i] = s[i];
             s[i] = tmp;
