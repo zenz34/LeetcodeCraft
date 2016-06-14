@@ -8,13 +8,16 @@ public class Solution {
             return s;
         }
         
-        len = s.length();
+        char a[] = s.toCharArray();
+        len = a.length;
         
-        for (i = 0; i < len; i++) {
-            tmp = s[i];
-            s[len - 1 - i] = s[i];
-            s[i] = tmp;
+        for (i = 0; i <= len / 2 - 1; i++) {
+            tmp = a[i];
+            a[i] = a[len - 1 - i];
+            a[len - 1 - i] = tmp;
         }
+        
+        s = String.valueOf(a);
         
         return s;
     }
