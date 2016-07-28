@@ -20,7 +20,7 @@ public class Solution {
         Queue<TreeNode> q1 = new LinkedList<TreeNode>();
         TreeNode head = root;
         int curQSize = 0;
-        TreeNode illegalNode = TreeNode(Integer.MIN_VALUE);
+        TreeNode nullNode = {Integer.MIN_VALUE), null, null};
         //  read next level node until size = 0
         while (q1.size() != 0) {
             curQSize = q1.size();
@@ -32,14 +32,14 @@ public class Solution {
                     q1.offer(head.left);
                 }
                 else {
-                    q1.offer(Integer.MIN_VALUE);
+                    q1.offer(nullNode);
                 }
                 
                 if (head.right != null) {
                     q1.offer(head.right);
                 }
                 else {
-                    q1.offer(Integer.MIN_VALUE);
+                    q1.offer(nullNode);
                 }
             }
             
