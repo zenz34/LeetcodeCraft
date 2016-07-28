@@ -20,7 +20,7 @@ public class Solution {
         Queue<TreeNode> q1 = new LinkedList<TreeNode>();
         TreeNode head = root;
         int curQSize = 0;
-        TreeNode nullNode = {Integer.MIN_VALUE), null, null};
+        TreeNode nullNode = {Integer.MIN_VALUE, null, null};
         //  read next level node until size = 0
         while (q1.size() != 0) {
             curQSize = q1.size();
