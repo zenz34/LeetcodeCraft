@@ -9,6 +9,10 @@
  */
 public class Solution {
     public boolean isSymmetric(TreeNode root) {
+        if (null == root) {
+            return true;
+        }
+        
         return isSymmetric(root.left, root.right);
     }
     
