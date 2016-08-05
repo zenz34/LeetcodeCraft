@@ -13,7 +13,7 @@ public class Solution {
         startIndex = 0;
         endIndex = nums.length - 1;
         //  process        
-        while (startIndex != endIndex) {
+        while (startIndex < endIndex || startIndex < nums.length) {
             if (nums[startIndex] == val && nums[endIndex] != val) {
                 tmp = nums[startIndex];
                 nums[startIndex] = nums[endIndex];
@@ -33,8 +33,8 @@ public class Solution {
                 startIndex++;
             }
         }
-
-        newLength = nums.length - startIndex - 1;
+        
+        newLength = nums.length - endIndex - 1;
 
         return newLength;
     }
