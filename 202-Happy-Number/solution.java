@@ -22,6 +22,7 @@ public class Solution {
                 }
                 
                 n = Result;
+                Result = 0;
             }
         }
         
