@@ -15,7 +15,7 @@ public class Solution {
         else if (root == p) {
             return p;
         }
-        else if (root = q) {
+        else if (root == q) {
             return q;
         }
         
