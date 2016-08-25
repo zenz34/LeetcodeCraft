@@ -12,18 +12,15 @@ public class Solution {
         if (head == null) {
             return null;
         }
-        
-        if (head != null && head.next == null) {
+        else if (head.next == null) {
             return head;    
         }
-        
-        //
-        ListNode newHead = head->next;
+
+        ListNode newHead = head.next;
         ListNode prev = head;
-        ListNode cur;
+        ListNode cur = prev.next;
         
-        while (prev != null && prev.next != null) {
-            cur = prev.next;
+        for (; prev != null && prev.next != null; cur.next.next = prev.next) {
             prev.next = cur.next;
             cur.next = prev;
             prev = prev.next;
