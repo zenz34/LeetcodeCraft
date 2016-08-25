@@ -18,12 +18,17 @@ public class Solution {
 
         ListNode newHead = head.next;
         ListNode prev = head;
-        ListNode cur = prev.next;
+        ListNode cur;
         
-        for (; prev != null && prev.next != null; cur.next.next = prev.next) {
+        while (prev != null && prev.next != null) {
+            cur = prev.next;
             prev.next = cur.next;
             cur.next = prev;
             prev = prev.next;
+            
+            if (prev != null && prev.next != null) {
+                cur.next.next = prev.next;
+            }
         }
 
         return newHead;
