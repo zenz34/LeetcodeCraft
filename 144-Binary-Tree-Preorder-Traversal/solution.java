@@ -50,6 +50,7 @@ public class Solution {
 		}
 		
 		while (stackMain.isEmpty() != true) {
+			p = stackMain.pop();
 			array.add(0, p.val);
 		}
 		
