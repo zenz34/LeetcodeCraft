@@ -39,10 +39,10 @@ public class Solution {
 				stackAssociate.push(p.left);
 			}
 			
-			try {
+			if (true != stackAssociate.pop().isEmpty) {
 			    p = stackAssociate.pop();
 			}
-			catch (EmptyStackException e) {
+			else {
 			    p = null;
 			}
 		}
