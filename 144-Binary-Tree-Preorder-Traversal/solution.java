@@ -23,15 +23,15 @@ public class Solution {
 		
 		Stack<TreeNode> stackAssociate = new Stack<TreeNode>();
 		//Stack<TreeNode> stackMain = new Stack<TreeNode>();
-		ArrayList<Integer> array = new ArrayList<Integer>(); 
+		ArrayList<Integer> arrayList = new ArrayList<Integer>(); 
 		TreeNode p = root;
 		
 		if (root == null) {
-			return array;
+			return arrayList;
 		}
 		
 		while (p != null) {
-			array.add(p.val);
+			arrayList.add(p.val);
 			
 			if (p.right != null) {
 				stackAssociate.push(p.right);
