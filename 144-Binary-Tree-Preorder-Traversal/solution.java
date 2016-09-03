@@ -22,7 +22,7 @@ public class Solution {
 
 		
 		Stack<TreeNode> stackAssociate = new Stack<TreeNode>();
-		Stack<TreeNode> stackMain = new Stack<TreeNode>();
+		//Stack<TreeNode> stackMain = new Stack<TreeNode>();
 		ArrayList<Integer> array = new ArrayList<Integer>(); 
 		TreeNode p = root;
 		
@@ -31,7 +31,7 @@ public class Solution {
 		}
 		
 		while (p != null) {
-			stackMain.push(p);
+			array.add(p.val);
 			
 			if (p.right != null) {
 				stackAssociate.push(p.right);
@@ -47,11 +47,6 @@ public class Solution {
 			else {
 			    p = null;
 			}
-		}
-		
-		while (stackMain.isEmpty() != true) {
-			p = stackMain.pop();
-			array.add(0, p.val);
 		}
 		
 		return array;
