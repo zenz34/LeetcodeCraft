@@ -19,14 +19,16 @@ public class Solution {
 		
 		
 		//  push x into main stack	
-		if (root == null) {
-			return null;
-		}
+
 		
 		Stack<TreeNode> stackAssociate = new Stack<TreeNode>();
 		Stack<TreeNode> stackMain = new Stack<TreeNode>();
 		ArrayList<Integer> array = new ArrayList<Integer>(); 
 		TreeNode p = root;
+		
+		if (root == null) {
+			return array;
+		}
 		
 		while (p != null) {
 			stackMain.push(p);
@@ -39,7 +41,7 @@ public class Solution {
 				stackAssociate.push(p.left);
 			}
 			
-			if (true != stackAssociate.pop().isEmpty) {
+			if (true != stackAssociate.isEmpty()) {
 			    p = stackAssociate.pop();
 			}
 			else {
