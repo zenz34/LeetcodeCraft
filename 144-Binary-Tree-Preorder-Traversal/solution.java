@@ -8,7 +8,7 @@
  * }
  */
 public class Solution {
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {		
 		//	push root.right into stack then push root.left into associate stack
 		
 		
@@ -48,11 +48,13 @@ public class Solution {
 		}
 		
 		while (stackMain.isEmpty() != true) {
-			System.out.println(p = stackMain.pop());
+			System.out.println((p = stackMain.pop()).val);
 			
-			array.add(p.val);
+			array.add(0, p.val);
 		}
 		
+		System.out.println(array);
+		
 		return array;
-    }
+	}
 }
