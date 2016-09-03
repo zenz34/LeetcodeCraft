@@ -50,12 +50,8 @@ public class Solution {
 		}
 		
 		while (stackMain.isEmpty() != true) {
-			System.out.println((p = stackMain.pop()).val);
-			
 			array.add(0, p.val);
 		}
-		
-		System.out.println(array);
 		
 		return array;
 	}
