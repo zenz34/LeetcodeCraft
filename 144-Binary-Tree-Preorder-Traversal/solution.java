@@ -49,6 +49,6 @@ public class Solution {
 			}
 		}
 		
-		return array;
+		return arrayList;
 	}
 }
