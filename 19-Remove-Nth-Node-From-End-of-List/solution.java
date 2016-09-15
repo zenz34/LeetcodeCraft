@@ -17,8 +17,9 @@ public class Solution {
         ListNode slowPoint = dummy;
         ListNode fastPoint = dummy;
         
-        while (n--) {
+        while (n > 0) {
             fastPoint = fastPoint.next;
+            n--;
         }
         //ListNode prePoint = null;
         
@@ -28,7 +29,7 @@ public class Solution {
             fastPoint = fastPoint.next;
         }
         
-        prePoint.next = slowPoint.next;
+        head.next = slowPoint.next;
         
         return dummy.next;
     }
