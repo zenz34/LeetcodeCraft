@@ -22,10 +22,10 @@ public class Solution {
         }
         //ListNode prePoint = null;
         
-        while (endPoint != null) {
+        while (fastPoint != null) {
             head = slowPoint;
             slowPoint = slowPoint.next;
-            endPoint = endPoint.next;
+            fastPoint = fastPoint.next;
         }
         
         prePoint.next = slowPoint.next;
