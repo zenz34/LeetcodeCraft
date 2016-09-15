@@ -25,7 +25,7 @@ public class Solution {
         
         ret = (tmp + root.val) >= 10 ? 1 : 0;
         
-        System.out.println("tmp" + tmp + "return " + ((tmp + root.val) >= 10 ? 1 : 0));
+        //System.out.println("tmp" + tmp + "return " + ((tmp + root.val) >= 10 ? 1 : 0));
         
         root.val = (root.val + tmp) % 10; 
         
@@ -49,10 +49,10 @@ public class Solution {
 		
 		//System.out.println(t.val);
 		
-		while (t != null) {
-			System.out.println(t.val);
-			t = t.next;
-		}
+		//while (t != null) {
+		//	System.out.println(t.val);
+		//	t = t.next;
+		//}
         
         return dummy.next;
     }
