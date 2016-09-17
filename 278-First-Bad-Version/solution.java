@@ -5,9 +5,9 @@ public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
         int start = 1;
         int end = n;
-        int mid = (start + mid) / 2;
         
-        for (; start != end; mid = (start + end) / 2) {
+        
+        for (int mid = (start + end) / 2; start != end; mid = (start + end) / 2) {
             if (isBadVersion(mid) == true) {
                 end = mid;
             }
