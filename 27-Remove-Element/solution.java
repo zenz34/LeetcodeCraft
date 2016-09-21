@@ -1,5 +1,5 @@
 public class RemoveElement {
-    public int removeElement(int[] nums, int val) {
+    public int Solution(int[] nums, int val) {
         int startIndex = 0;
         int endIndex = 0;
         int newLength = 0;
