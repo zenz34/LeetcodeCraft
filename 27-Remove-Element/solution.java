@@ -3,41 +3,30 @@ public class Solution {
         int startIndex = 0;
         int endIndex = 0;
         int newLength = 0;
-        int tmp = 0;
 
         //  corner case
-        if (nums == null || nums.length == 0) {
+        if (nums == null || nums.length == 0) { //length == 0?
             return 0;
         }
 
         startIndex = 0;
         endIndex = nums.length - 1;
 
-
-
-        //  process
-        while (startIndex <= endIndex) {
-            if (nums[startIndex] == val && nums[endIndex] != val) {
-                tmp = nums[startIndex];
-                nums[startIndex] = nums[endIndex];
-                nums[endIndex] = tmp;
-
-                startIndex++;
-                endIndex--;
-            }
-            else if (nums[startIndex] == val && nums[endIndex] == val) {
-                endIndex--;
-            }
-            else if (nums[startIndex] != val && nums[endIndex] == val) {
-                startIndex++;
-                endIndex--;
-            }
-            else {
+        for (; startIndex != endIndex; endIndex--) {  //  startIndex != endIndex   length == 0 optm
+            if (nums[endIndex] == val) {
+                
+                while (nums[startIndex] != val) {
+                    startIndex++;
+                }
+                
+                nums[endIndex] = nums[startIndex];
+                nums[startIndex] = val;
                 startIndex++;
             }
         }
-
-        newLength = startIndex;
+        
+        //nums = nums + startIndex;
+        newLength = nums.length - startIndex - 1;
 
         return newLength;
     }
