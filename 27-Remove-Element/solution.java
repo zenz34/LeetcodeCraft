@@ -14,14 +14,7 @@ public class Solution {
         endIndex = nums.length - 1;
 
         //  for [3, 3] target 3
-        while (nums[endIndex] == val) {
-            endIndex--;
-
-            if (endIndex < 0) {
-                return 0;
-            }
-        }
-
+        
         for (; startIndex < endIndex; startIndex++) {  //  startIndex != endIndex   length == 0 optm
             if (nums[startIndex] == val) {
 
