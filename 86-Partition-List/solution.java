@@ -25,7 +25,7 @@ public class Solution {
             ListNode cur = head;
             
             while (cur != null) {
-                if (cur < val) {
+                if (cur.val < val) {
                     leftCur.next = cur;
                     leftCur = leftCur.next;
                 }
