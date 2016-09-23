@@ -5,44 +5,41 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * 
+ * rightDummy.next = null;
+ * rightCur.next = null;
+ * 
  */
 public class Solution {
-    public ListNode partition(ListNode head, int x) {
-        if (null == head) {
-            return head;
-        }
-        
-        ListNode dummy = ListNode(0);
-        dummy.next = head;
-        ListNode smallPoint = dummy;
-        ListNode largePoint = dummy;
-        ListNode cur = head;
-        
-        while (largePoint.next != null) {
-            largePoint = largePoint.next;
-        }
-        
-        while (cur.next != null) {
-            if (cur.val >= x) {
-                head = cur;
-                
-                if (cur.next != null) {
-                    large.next = cur;
-                    smallPoint.next = cur.next;
-                    cur.next = null;
-                    cur = head;
-                }
-                else {
-                    return dummy.next;
-                }
-            }
-            else {
-                smallPoint = cur;
+        public ListNode partition(ListNode head, int x) {
+            if (null == head) {
+                return head;
             }
             
-            cur = cur.next;
+            ListNode leftDummy = new ListNode(0);
+            leftDummy.next = head;
+            ListNode rightDummy = new ListNode(0);
+            rightDummy.next = null;
+            ListNode leftCur = leftDummy;
+            ListNode rightCur = rightDummy;
+            ListNode cur = head;
+            
+            while (cur != null) {
+                if (cur < val) {
+                    leftCur.next = cur;
+                    leftCur = leftCur.next;
+                }
+                else {
+                    rightCur.next = cur;
+                    rightCur = rightCur.next;
+                }
+                
+                cur = cur.next;
+            }
+            
+            rightCur.next = null;
+            leftCur.next = rightDummy.next;
+            
+            return leftDummy.next;
         }
-        
-        return dummy.next;
-    }
 }
