@@ -13,11 +13,11 @@ public class Solution {
             }
         }
         
-        if (lazy != 0) {
-            while (lazy != nums.length) {
-                nums[lazy++] = 0;
-            }
+        //if (lazy != 0) {  //it's not needed since [3, 12] the lazy already run to the end
+        while (lazy != nums.length) {
+            nums[lazy++] = 0;
         }
+        //}
         
         return;
     }
