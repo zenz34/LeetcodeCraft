@@ -15,7 +15,7 @@ public class Solution {
         
         if (lazy != 0) {
             while (lazy != nums.length) {
-                nums[lazy] = 0;
+                nums[lazy++] = 0;
             }
         }
         
