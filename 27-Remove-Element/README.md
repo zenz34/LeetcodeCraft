@@ -7,6 +7,8 @@ Then return array + x (x means number of the target value in the head)
 *   {2, 2}  2
 *   [0,4,4,0,4,4,4,0,2] 4
 *   [4, 4] 3
+*  {2} 2
+* {2} 3
 These are test cases that I failed.
 It's hard to use the two pointers with head and tail.
 It's more easy to use bubble sort thinking!
