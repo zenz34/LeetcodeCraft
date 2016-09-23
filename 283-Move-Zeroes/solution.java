@@ -9,7 +9,7 @@ public class Solution {
         
         for (; cur < nums.length; cur++) {
             if (nums[cur] != 0) {
-                a[lazy++] = nums[cur];
+                nums[lazy++] = nums[cur];
             }
         }
         
