@@ -1,24 +1,18 @@
 public class Solution {
     public String reverseString(String s) {
-        int i = 0;
-        int len = 0;
-        char tmp = ' ';
-        
-        if (null == s) {
+        if (s == null || s.length() == 0) {
             return s;
         }
         
-        char a[] = s.toCharArray();
-        len = a.length;
+        char[] a = s.toCharArray();
+        char tmp = ' ';
         
-        for (i = 0; i <= len / 2 - 1; i++) {
-            tmp = a[i];
-            a[i] = a[len - 1 - i];
-            a[len - 1 - i] = tmp;
+        for (int head = 0, tail = a.length - 1; head <= tail; head++, tail--) {
+            tmp = a[head];
+            a[head] = a[tail];
+            a[tail] = tmp;
         }
-        
-        s = String.valueOf(a);
-        
-        return s;
+
+        return String.valueOf(a);
     }
 }
