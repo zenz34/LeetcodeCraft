@@ -4,6 +4,10 @@ public class Solution {
             return s;
         }
         
+        StringBuilder sb = new StringBuilder(s);
+        
+        return sb.reverse().toString();
+        /*
         char[] a = s.toCharArray();
         char tmp = ' ';
         
@@ -14,5 +18,6 @@ public class Solution {
         }
 
         return String.valueOf(a);
+        */
     }
 }
