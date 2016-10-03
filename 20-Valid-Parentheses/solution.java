@@ -1,5 +1,5 @@
 public class Solution {
-    public boolean isValid(String s) {
+    public boolean isValid(String str) {
      if (str == null || str.length() % 2 == 1) {
             return false;
         }
@@ -9,9 +9,6 @@ public class Solution {
 
         for (int i = 0; i < str.length(); i++) {
             ch = str.charAt(i);
-
-
-
             switch (ch) {
                 case '{':
                 case '[':
