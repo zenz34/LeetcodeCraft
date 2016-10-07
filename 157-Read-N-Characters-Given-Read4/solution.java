@@ -8,6 +8,10 @@ public class Solution extends Reader4 {
      * @return    The number of characters read
      */
     public int read(char[] buf, int n) {
+        if (buf == null || n <= 0) {
+            return 0;
+        }
+        
         int i = 0;
         int tmp = 0;
         
