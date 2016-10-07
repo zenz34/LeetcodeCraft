@@ -15,7 +15,7 @@ public class Solution extends Reader4 {
         int i = 0;
         int tmp = 0;
         
-        while (i != n) {
+        while (i < n) {
             tmp = read4(buf);
             if (4 == tmp) {
                 i += 4;
