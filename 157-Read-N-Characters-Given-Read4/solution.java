@@ -17,7 +17,7 @@ public class Solution extends Reader4 {
                 i += 4;
             }
             else {
-                i += tmp
+                i += tmp;
             }
         }
         
