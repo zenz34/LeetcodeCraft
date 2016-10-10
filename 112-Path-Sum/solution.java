@@ -10,15 +10,23 @@
 public class Solution {
     private boolean dfsHelper(TreeNode root, int preSum, int sum) {
         if (root.left == null && root.right == null) {
-            if (sum == preSum) {
+            if (sum == preSum + root.val) {
                 return true;
             }
-            
+
             return false;
         }
-        
-        if (dfsHelper(root.left, root.val + preSum, sum) || dfsHelper(root.right, root.val + preSum, sum)) {
-            return true;
+
+        if (root.left != null) {
+            if (dfsHelper(root.left, preSum + root.val, sum)) {
+                return true;
+            }
+        }
+
+        if (root.right != null) {
+            if (dfsHelper(root.right, preSum + root.val, sum)) {
+                return true;
+            }
         }
         
         return false;
