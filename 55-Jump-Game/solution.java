@@ -1,36 +1,25 @@
 public class Solution {
-        private boolean helper(int[] nums, int[] visited, int curStep, int goalStep) {
-            if (curStep == goalStep) {
-                return true;
-            }
-            
-            for (int i = 1; i <= nums[curStep]; i++) {
-                if (visited[curStep + i] == 0) {
-                    if (helper(nums, visited, curStep + i, goalStep)) {
-                        return true;
-                    }
-                }
-            }
-            
-            visited[curStep] = 1;
-            
-            return false;
-        }
-
         public boolean canJump(int[] nums) {
             if (nums == null) {
                 return false;
             }
+
+            int maxStep = 0;
     
-            int[] visited = new int[nums.length];
+            for (int curStep = 0; curStep < nums.length - 1; curStep++) {
+                if (maxStep <= curStep && nums[curStep] == 0) {
+                    return false;
+                }
     
-            for (int i = 0; i < nums.length; i++) {
-                visited[i] = 0;
+                if (maxStep < curStep + nums[curStep]) {
+                    maxStep = curStep + nums[curStep];
+                }
+    
+                if (nums[curStep] + curStep >= nums.length - 1) {
+                    return true;
+                }
             }
     
-    
-            boolean flag =  helper(nums, visited, 0, nums.length - 1);
-    
-            return flag;
+            return true;
         }
 }
