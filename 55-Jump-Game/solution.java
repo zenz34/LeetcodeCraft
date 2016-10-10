@@ -4,19 +4,17 @@ public class Solution {
                 return false;
             }
 
-            int maxStep = 0;
+            int maxReachableStep = 0;
     
-            for (int curStep = 0; curStep < nums.length - 1; curStep++) {
-                if (maxStep <= curStep && nums[curStep] == 0) {
+            for (int curStep = 0; curStep < nums.length; curStep++) {
+                if (maxReachableStep < curStep) {
                     return false;
                 }
     
-                if (maxStep < curStep + nums[curStep]) {
-                    maxStep = curStep + nums[curStep];
-                }
+                maxReachableStep = Math.max(curStep + nums[curStep], maxReachableStep);
     
-                if (nums[curStep] + curStep >= nums.length - 1) {
-                    return true;
+                if (maxReachableStep >= nums.length - 1) {
+                    break;
                 }
             }
     
