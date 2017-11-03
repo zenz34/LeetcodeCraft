@@ -1,4 +1,6 @@
-public class Solution {
+
+
+public class a.b {
     public int[] twoSum(int[] nums, int target) {
         int[] result = {-1, -1};
         int secondValue = 0;
