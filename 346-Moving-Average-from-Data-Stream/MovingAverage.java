@@ -32,7 +32,7 @@ public class MovingAverage {
     private int[] a;
     private int cur;
     private double sum;
-    /** Initialize your data structure here. */
+    Initialize your data structure here.
     public MovingAverage(int size) {
         this.a = new int[size];
         this.cur = 0;
